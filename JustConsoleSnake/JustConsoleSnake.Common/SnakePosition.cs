@@ -1,19 +1,21 @@
 ﻿using System;
-
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace JustSnake.Common
+namespace JustConsoleSnake.Common
 {
-   public struct Position
+    public struct SnakePosition
     {
         private int row;
-        private int col;
+
         public int Row
         {
             get { return row; }
             set { row = value; }
         }
-        
+        private int col;
 
         public int Col
         {
@@ -21,13 +23,10 @@ namespace JustSnake.Common
             set { col = value; }
         }
 
-        public Position(int x, int y)
+        public SnakePosition(int row, int col)
         {
-            this.row = x;
-            this.col = y;
+            this.row = row;
+            this.col = col;
         }
-        
-
-
     }
 }

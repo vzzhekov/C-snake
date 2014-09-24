@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("JustSnake.Common")]
+[assembly: AssemblyTitle("JustConsoleSnake.Common")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("JustSnake.Common")]
+[assembly: AssemblyProduct("JustConsoleSnake.Common")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("225e08f3-63f9-48d3-9954-2c7619e8ef25")]
+[assembly: Guid("47cb55e6-7138-424e-ad7c-8466e628fdf7")]
 
 // Version information for an assembly consists of the following four values:
 //
