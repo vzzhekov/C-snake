@@ -11,14 +11,18 @@ namespace JustConsoleSnakeII.Common
 
         public static void PrintWithInts(int row, int col, string symbol)
         {
+            
             SetUpConsole.SetCursor(row, col);
             Console.Write(symbol);
+            
         }
 
         public static void PrintWithPosition(Position position, string symbol)
         {
+          
             Console.SetCursorPosition(position.Row, position.Col);
             Console.Write(symbol);
+           
         }
     }
 }

@@ -37,6 +37,7 @@ namespace JustConsoleSnake_II
             Position food = new Position(randomNumberGenerator.Next(0, Console.WindowHeight), randomNumberGenerator.Next(0, Console.WindowWidth));
            
             int direction = 0;
+            int count = 0;
 
             while (true)
             {
@@ -56,25 +57,32 @@ namespace JustConsoleSnake_II
                 {
 
                     SetUpConsole.SetCursor(10,10);
+                    count = count + 10; 
                     Console.WriteLine("Game Over");
-
+                    Console.WriteLine("Your score is {0}", score);
+                    
+                   
                     return;
 
                 }
-                
-                
-                
-                
-                
+
+                //foreach (Position position in snakeElements)
+                //{
+                //    if (position.Col == snakeNewHead.Row || position.Row == snakeNewHead.Col)
+                //    {
+                //        Console.WriteLine("GameOver");
+                //        return;
+                //    }
+                //}
+  
                 if (snakeNewHead.Col == food.Col && snakeNewHead.Row == food.Row)
                 {
 
 
                     food = new Position(randomNumberGenerator.Next(2, Console.WindowHeight-1), randomNumberGenerator.Next(2, Console.WindowWidth));
-                    score++;
-                    threadSleep= threadSleep - 4;
+                    
+                    threadSleep= threadSleep - 2;
                 }
-
 
 
                 else
@@ -91,10 +99,13 @@ namespace JustConsoleSnake_II
                     PrintOnScreen.PrintWithPosition(position, "*");
                 }
 
-                PrintOnScreen.PrintWithPosition(food, "@");
-               
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.SetCursorPosition(food.Row,food.Col);
+                Console.Write("@");
+                Console.ForegroundColor = ConsoleColor.Yellow;
 
-                PrintOnScreen.PrintWithInts(Console.WindowWidth/3,0,"Score: "  + ((snakeElements.Count() -6)*10).ToString());
+                score = ((snakeElements.Count() -6)*10);
+                PrintOnScreen.PrintWithInts(Console.WindowWidth/3,0,"Score: "  + score.ToString());
 
                 
                 Thread.Sleep(threadSleep);

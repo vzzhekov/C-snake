@@ -12,6 +12,9 @@ namespace JustConsoleSnakeII.Common
         {
             Console.BufferHeight = Console.WindowHeight;
             Console.BufferWidth = Console.WindowWidth;
+            Console.BackgroundColor = ConsoleColor.DarkGreen;
+      
+            
         }
 
         public static void SetCursor(int row, int col)
