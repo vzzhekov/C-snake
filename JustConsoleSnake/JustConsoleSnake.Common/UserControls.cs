@@ -10,9 +10,9 @@ namespace JustConsoleSnake.Common
     {
         public static int Move(ConsoleKeyInfo userInput)
         {
-            
-  
             int direction = 0;
+            
+            
             if (userInput.Key == ConsoleKey.LeftArrow)
             {
                 direction = 1;
@@ -34,8 +34,10 @@ namespace JustConsoleSnake.Common
 
             }
 
-            return direction; 
 
+            
+            return direction;
+            
         }
 
     }

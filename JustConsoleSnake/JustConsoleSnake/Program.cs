@@ -11,18 +11,22 @@ namespace JustConsoleSnake
         static void Main()
         {
 
+
             Queue<SnakePosition> snakeElements = new Queue<SnakePosition>();
             SnakeInitializer.Start(snakeElements);
-   
+            int direction = 0;
             
             while (true)
             {
-
-                SnakeMove.Move(snakeElements);
-
+                if (Console.KeyAvailable) { 
+                ConsoleKeyInfo userinput = Console.ReadKey();
+                direction = UserControls.Move(userinput);
+                }
+                SnakeMove.Move(snakeElements,direction);
+                
             }
-
-
+            
+         
         }
     }
 }
