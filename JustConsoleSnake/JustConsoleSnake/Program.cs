@@ -12,17 +12,22 @@ namespace JustConsoleSnake
         {
 
 
-            Queue<SnakePosition> snakeElements = new Queue<SnakePosition>();
+            Queue<Position> snakeElements = new Queue<Position>();
             SnakeInitializer.Start(snakeElements);
             int direction = 0;
+            ConsoleStart.SetHeightAndWidth();
             
+            Random randomNumberGenerator = new Random();
+           
+
             while (true)
             {
+                
                 if (Console.KeyAvailable) { 
                 ConsoleKeyInfo userinput = Console.ReadKey();
                 direction = UserControls.Move(userinput);
                 }
-                SnakeMove.Move(snakeElements,direction);
+                SnakeMove.Move(snakeElements, direction, randomNumberGenerator);
                 
             }
             

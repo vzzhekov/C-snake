@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JustConsoleSnake.Common
 {
-    public struct SnakePosition
+    public struct Position
     {
         private int row;
 
@@ -23,7 +23,7 @@ namespace JustConsoleSnake.Common
             set { col = value; }
         }
 
-        public SnakePosition(int row, int col)
+        public Position(int row, int col)
         {
             this.row = row;
             this.col = col;

@@ -40,10 +40,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConsoleStart.cs" />
+    <Compile Include="FoodGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SnakeInitializer.cs" />
     <Compile Include="SnakeMove.cs" />
-    <Compile Include="SnakePosition.cs" />
+    <Compile Include="Position.cs" />
     <Compile Include="SnakePrint.cs" />
     <Compile Include="UserControls.cs" />
   </ItemGroup>

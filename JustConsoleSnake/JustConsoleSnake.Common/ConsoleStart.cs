@@ -8,7 +8,7 @@ namespace JustConsoleSnake.Common
 {
     public static class ConsoleStart
     {
-        public static void Start()
+        public static void SetHeightAndWidth()
         {
             Console.BufferWidth = Console.WindowWidth;
             Console.BufferHeight = Console.WindowHeight;
