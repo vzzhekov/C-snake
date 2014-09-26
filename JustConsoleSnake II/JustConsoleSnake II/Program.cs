@@ -13,9 +13,30 @@ namespace JustConsoleSnake_II
     {
         static void Main()
         {
-            SetUpConsole.SetField();
+            
+          
+           
+            Console.WriteLine("Choose your difficulty - Easy, Normal, Hard");
+            string userinput = Console.ReadLine().ToUpper();
+            int threadSleep = 0;
+            switch (userinput)
+            {
+                case "EASY":
+                    threadSleep = 140;
+                    break;
+                case "NORMAL":
+                    threadSleep = 120;
+                    break;
+                case "HARD":
+                    threadSleep = 80;
+                    break;
+                default:
+                    threadSleep = 100;
+                    break;
+            }
 
-            int threadSleep = 100;
+            
+            SetUpConsole.SetField();
             
             Position[] directions = new Position[] {
                 new Position(0,1), //right
